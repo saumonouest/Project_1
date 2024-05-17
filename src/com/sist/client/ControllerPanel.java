@@ -1,17 +1,20 @@
 package com.sist.client;
-import javax.swing.*;
-import java.awt.Color;
+
 import java.awt.CardLayout;
+import java.awt.Color;
+
+import javax.swing.*;
+
 public class ControllerPanel extends JPanel {
-		public CardLayout card=new CardLayout();
-		public HomePanel hp=new HomePanel();
-		public MarketPanel mp=new MarketPanel();
-		public CommunityPanel cp=new CommunityPanel();
-		
-		public ControllerPanel() {
-			setLayout(card);
-			add("HOME",hp);
-			add("MARKET",mp);
-			add("COMMUNITY",cp);
-		}
+	public CardLayout card = new CardLayout();
+	public HomePanel hp = new HomePanel();
+	public FindPanel fp = new FindPanel();
+	public write wr = new write();
+	public ControllerPanel() {
+		setLayout(card);	// 위에 오는 레이아웃이 먼저 보임.
+		add("HOME", hp);
+		add("FIND", fp);
+		add("WRITE",wr);
+	}
+	
 }
